@@ -11,48 +11,48 @@
     height: 100vh;
 }
 
-.banner-text{
+.countryText{
     text-align: center;
     color: black;
     padding-top: 180px;
 }
 
 /*For the style of the country name*/
-.banner-text h1{
+.countryText h1{
     font-size: 50px;
     
 }
 
-.banner-btn {
+.tabs {
     margin: 70px auto;
 
 }
 
-.banner-btn a{
+.tabs a{
     width:  150px;
     text-decoration:none;
-    display: inline-flex;
+    display: inline-block;
     margin: 0 10px;
     padding: 12px 0;
     color:black;
     border: .5px solid black;
     position: relative;
-    z-index: 10;
+    z-index: 1;
 
 }
 
-.banner-btn a span{
+.tabs a span{
     width: 0;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     background: rgba(255, 255, 255, 0.367);
-    z-index: -10;
+    z-index: -1;
     transition: 0.5s;
 }
 
-.banner-btn a:hover span{
+.tabs a:hover span{
     width: 100%;
 
 }
