@@ -8,17 +8,21 @@
       text-align: center;
     }
     h1 {
-      background-color: lightblue;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
+      color: aliceblue;
+      font-size: 500%;
       padding: 20px;
       margin: 0;
     }
     h2 {
-      background-color: lightblue;
+      font-size: 400%;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+      background-color: rgb(243, 243, 243);
       padding: 20px;
       margin: 0;
     }
     .ribbon {
-      background-color: lightgray;
+      background-color: rgb(243, 243, 243);
       padding: 20px;
       text-align: left;
       width: 80%;
@@ -27,57 +31,122 @@
     .navbar {
       display: flex;
       justify-content: center;
-      background-color: lightblue;
+      
       padding: 10px;
     }
     .navbar a {
       display: inline-block;
       border-radius: 50%;
-      width: 40px;
-      height: 40px;
+      width: 280px;
+      height: 280px;
       background-color: white;
-      color: lightblue;
+      color: l=rgb(243, 243, 243);
       text-decoration: none;
       text-align: center;
-      line-height: 40px;
+      line-height: 280px;
       margin: 0 10px;
     }
+    .navbar img {
+      width: 120px;
+      height: 120px;
+      margin-top: 80px;
+    }
+    .header {
+  background-image: url(https://t3.ftcdn.net/jpg/01/01/47/52/240_F_101475249_mwqDYG2LDzEoehZLilV6ISgqaDwL3X0g.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header2 {
+  background-color: rgb(243, 243, 243);
+  font-size: 120%;
+  font-style: italic;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-size: cover;
+  background-position: center;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  .header3 {
+  background-color: rgb(243, 243, 243);
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
   </style>
 </head>
 <body>
-  <h1>The Traveler's Handbook</h1>
+  <header class="header">
+    <h1>The Traveler's Handbook</h1>
+  </header>
+  <header class="header2">
   <h2>Country</h2>
+</header>
+  <header class="header3">
   <div class="navbar">
-    <a href="#flights">✈️</a>
-    <a href="#culture">🎭</a>
-    <a href="#dialect">💬</a>
-    <a href="#safety">🛡️</a>
-    <a href="#history">📜</a>
-    <a href="#food">🍴</a>
+    <a href="#flights">
+      <img src="https://t4.ftcdn.net/jpg/00/07/93/25/240_F_7932524_0YMnBEdnZB5aZ70ZDzV14ioQLLLJbnER.jpg" alt="Flights Icon">
+    </a>
+    <a href="#culture">
+      <img src="https://t4.ftcdn.net/jpg/00/08/98/65/240_F_8986561_kgaYTKhNy68mQlS1Nh8drl3K8aonCKon.jpg" alt="Culture Icon">
+    </a>
+    <a href="#dialect">
+      <img src="https://t3.ftcdn.net/jpg/03/39/09/96/240_F_339099678_pKvz5NX2hyNyQle4HJMQFiWjOsNtkIiQ.jpg" alt="Dialect Icon">
+    </a>
+    <a href="#safety">
+      <img src="https://t3.ftcdn.net/jpg/01/91/36/60/240_F_191366083_3NN2tXPpSJ9KYCfPl3hI5g04tx5MyYjr.jpg" alt="Safety Icon">
+    </a>
+    <a href="#history">
+      <img src="https://t4.ftcdn.net/jpg/01/07/57/91/240_F_107579118_bCePwHfIctJoNhmF1v39ZNvAbsKyqCnI.jpg" alt="History Icon">
+    </a>
+    <a href="#food">
+      <img src="https://t4.ftcdn.net/jpg/01/20/88/89/240_F_120888926_IukhPsWnEvzZfsVhuVyEKS7hyrK5qHXy.jpg" alt="Food Icon">
+    </a>
   </div>
-  <div class="ribbon">
-    <h2 id="flights">Flights</h2>
-    <p>Get information about flight options, schedules, and prices for your destination.</p>
-  </div>
-  <div class="ribbon">
-    <h2 id="culture">Culture</h2>
-    <p>Learn about the local culture, customs, and traditions of your destination.</p>
-  </div>
-  <div class="ribbon">
-    <h2 id="dialect">Local Dialect</h2>
-    <p>Get tips on how to communicate effectively with the local people and understand the local dialect.</p>
-  </div>
-  <div class="ribbon">
-    <h2 id="safety">Safety</h2>
-    <p>Stay safe with information about the local laws, emergency resources, and travel warnings for your destination.</p>
-  </div>
-  <div class="ribbon">
-    <h2 id="history">History</h2>
-    <p>Discover the rich history and heritage of your destination and learn about its past.</p>
-  </div>
-  <div class="ribbon">
-    <h2 id="food">Local Food</h2>
-    <p>Explore the local cuisine and find the best restaurants and dishes to try while on your trip.</p>
-  </div>
+</header>
+  <a href="Flights.html">
+    <div class="ribbon">
+      <h2 id="flights">Flights</h2>
+      <p>Get information about flight options, schedules, and prices for your destination.</p>
+    </div>
+  </a>
+  <a href="Culture.html">
+    <div class="ribbon">
+      <h2 id="culture">Culture</h2>
+      <p>Learn about the local culture, customs, and traditions of your destination.</p>
+    </div>
+  </a>
+  <a href="Dialect.html">
+    <div class="ribbon">
+      <h2 id="dialect">Local Dialect</h2>
+      <p>Get tips on how to communicate effectively with the local people and understand the local dialect.</p>
+    </div>
+  </a>
+  <a href="Safety.html">
+    <div class="ribbon">
+      <h2 id="safety">Safety</h2>
+      <p>Stay safe with information about the local laws, emergency resources, and travel warnings/ scams for your destination.</p>
+    </div>
+  </a>
+  <a href="History.html">
+    <div class="ribbon">
+      <h2 id="history">History</h2>
+      <p>Discover the rich history and heritage of your destination and learn about its past.</p>
+    </div>
+  </a>
+  <a href="Food.html">
+    <div class="ribbon">
+      <h2 id="food">Local Food</h2>
+      <p>Explore the local cuisine and find the best restaurants and dishes to try while on your trip.</p>
+    </div>
+  </a>
 </body>
 </html>
