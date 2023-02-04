@@ -75,14 +75,10 @@
   </head>
   <body>
     <div class="search-container">
-      <form name="country_form" action="searchEngine" method="get">
-        <input type="input" class="search-bar" placeholder="Search for a country..." style="color:black";>
+      <form id="countryForm" name="country_form">
+        <input type="input" id="country" class="search-bar" placeholder="Search for a country..." style="color:black";>
+        <input type="submit" value="Search">
       </form>
-      <div class="search-btn">
-        <button style="color: black;" onclick="document.location='pythonWebsite.py">
-        Search
-        </button>
-      </div>
     </div>
     <div class="navbar">
       <a href="Homepage draft 1 (simone).html" class="active">Home</a>
@@ -90,7 +86,7 @@
       <a href="ContactInfo.html" class="active">Contact</a>
     </div>
     
-   
+    <script src="homepage.js"></script>
   </body>
 
 </html>
