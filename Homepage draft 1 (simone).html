@@ -11,16 +11,17 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
+        color: #333;
       }
       
       .search-bar {
         width: 100%;
         padding: 16px;
         font-size: 16px;
-        color: white;
+        color: black;
         border-radius: 10px;
         border: 2px solid #333;
-        background-color: rgba(10, 117, 119, 0.228);
+        background-color: rgba(21, 238, 241, 0.357);
       }
       .bottom {
         color: red;
@@ -63,13 +64,25 @@
         padding: 14px 20px;
         text-decoration: none;
       }
+      .search-link {
+        color: white;
+        max-width: 10px;
+      }
+      .search-btn {
+        margin: 10px;
+      }
     </style>
   </head>
   <body>
     <div class="search-container">
-      <form>
-        <input type="text" class="search-bar" placeholder="Search for a country...">
+      <form name="country_form" action="searchEngine" method="get">
+        <input type="input" class="search-bar" placeholder="Search for a country..." style="color:black";>
       </form>
+      <div class="search-btn">
+        <button style="color: black;" onclick="document.location='pythonWebsite.py">
+        Search
+        </button>
+      </div>
     </div>
     <div class="navbar">
       <a href="Homepage2.html" class="active">Home</a>
