@@ -1,4 +1,3 @@
-const searchCoutnry = document.querySelector("")
 
 const options = {
 	method: 'GET',
@@ -14,7 +13,7 @@ fetch('https://flight-radar1.p.rapidapi.com/airports/list', options)
         console.log(data.rows.forEach(myFunction))
     });
     function myFunction(item) {
-        if(item === '') {
+        if(item.country === 'France') {
             console.log(item.country);
         }
     }
