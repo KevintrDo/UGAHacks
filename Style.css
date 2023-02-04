@@ -5,18 +5,19 @@
 }
 
 #banner{
-    /*Add the background picture from the home page*/
-    background: honeydew;
+    background: rgb(155, 209, 204);
     background-size: cover;
     background-position: center;
     height: 100vh;
 }
+
 .banner-text{
     text-align: center;
     color: black;
     padding-top: 180px;
 }
 
+/*For the style of the country name*/
 .banner-text h1{
     font-size: 50px;
     
@@ -29,10 +30,29 @@
 
 .banner-btn a{
     width:  150px;
-    text-decoration: none;
-    display: inline-block;
+    text-decoration:none;
+    display: inline-flex;
     margin: 0 10px;
     padding: 12px 0;
     color:black;
     border: .5px solid black;
+    position: relative;
+    z-index: 10;
+
+}
+
+.banner-btn a span{
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.367);
+    z-index: -10;
+    transition: 0.5s;
+}
+
+.banner-btn a:hover span{
+    width: 100%;
+
 }
