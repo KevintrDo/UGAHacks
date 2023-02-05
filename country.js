@@ -8,3 +8,5 @@ if (countryName != null) {
     document.getElementById("country").innerHTML = countryName
     document.getElementById("country").style = "visiblity: visible"    
 }
+
+document.getElementById("flights").href = `Flights.html?country=${countryName}`

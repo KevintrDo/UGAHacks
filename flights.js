@@ -1,7 +1,9 @@
 const queryStr = window.location.search
 const urlParams2 = new URLSearchParams(queryStr)
-const country = urlParams.get("country")
+const country = urlParams2.get("country")
 
+// change heading to "Flights to [Country]"
+document.getElementById("country-name").innerHTML = country
 const options = {
 	method: 'GET',
 	headers: {
@@ -12,17 +14,30 @@ const options = {
 
 const countries = [];
 const departureCity = [];
+const items = []
+
 fetch('https://flight-radar1.p.rapidapi.com/airports/list', options)
 	.then(response => response.json())
-	.then(data => {
-        console.log(data.rows.forEach(myFunction))
+    	.then(data => {
+        data.rows.forEach(myFunction)
     });
-    function myFunction(item) {
-        if(item.country === country) {
-            console.log(item.country);
-            countries.push(item.country);
-            departureCity.push(item.city);
-        }        
-    }	         
-    console.log(countries)
-    console.log(departureCity)
+
+function myFunction(item) {
+    console.log(item)  
+    if(item.country.toLowerCase() === country.toLowerCase()) {
+        document.createElement("p")
+        document.getElementById("countries").innerHTML += `${item.country}<br>`
+        document.getElementById("departureCity").innerHTML += `${item.city}<br>`   
+        document.getElementById("arrivalCity").innerHTML += `unable to implement<br>` 
+        document.getElementById("departureTime").innerHTML += `unable to implement<br>` 
+        document.getElementById("arrivalTime").innerHTML += `unable to implement<br>`
+    }        
+}	         
+
+//const JSON = JSON.parse(countries[0]);
+console.log(countries)
+console.log(departureCity)
+console.log(items)
+
+//document.getElementById("countries").innerHTML = JSON //items["20"]["country"]
+//document.getElementById("departureCity").innerHTML = departureCity[50]
