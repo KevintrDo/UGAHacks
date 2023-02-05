@@ -1,3 +1,6 @@
+const queryStr = window.location.search
+const urlParams2 = new URLSearchParams(queryStr)
+const country = urlParams.get("country")
 
 const options = {
 	method: 'GET',
@@ -7,17 +10,19 @@ const options = {
 	}
 };
 
+const countries = [];
+const departureCity = [];
 fetch('https://flight-radar1.p.rapidapi.com/airports/list', options)
 	.then(response => response.json())
 	.then(data => {
         console.log(data.rows.forEach(myFunction))
     });
     function myFunction(item) {
-        if(item.country === 'France') {
+        if(item.country === country) {
             console.log(item.country);
-        }
-    }
-	//.catch(err => console.error(err))
-    
-    
- 
+            countries.push(item.country);
+            departureCity.push(item.city);
+        }        
+    }	         
+    console.log(countries)
+    console.log(departureCity)
