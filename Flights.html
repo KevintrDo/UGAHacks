@@ -3,21 +3,33 @@
   <head>
     <title>The Traveler's Handbook</title>
     <style>
+
+      /*
+      style of the website
+      */
       table {
         width: 100%;
         border-collapse: collapse;
       }
 
+      /*
+      style of the header
+      */
      h1 {
-  border: 1px solid black;
-  padding: 8px;
+  
+  padding: 30px;
   text-align: center;
   font-size: 300%;
+  padding-top: 100px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
 }
 
+/*
+      style of the h2
+      */
 h2 {
-  background-color: #31ca23;
+  background-color: hsl(192, 70%, 46%);
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-style: italic;
   text-align: center;
@@ -25,16 +37,48 @@ h2 {
   padding: 15px;
 }
 
+/*
+      style of the tr and th
+      */
 tr, th {
-  background-color: #7dff04;
+  background-color: #04c0ff;
   text-align: center;
   font-weight: bold;
   padding: 15px;
 }
+/**
+        style of the navigation bar
+        */
+        .navbar {
+        overflow: hidden;
+        background-color: hsl(199, 70%, 46%);
+        position: absolute;
+        padding: 10px;
+        width: 100%;
+        top: 0;
+        left: 0;
+      }
+
+      /**
+        style of the navigation bar
+        */
+      .navbar a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+      }
 
     </style>
   </head>
   <body>
+    <div class="navbar">
+      <a href="Homepage draft 1 (simone).html" class="active">Home</a>
+      <a href="AboutUs.html" class="active">About Us</a>
+      <a href="ContactInfo.html" class="active">Contact</a>
+    </div>
     <h1>The Traveler's Handbook</h1>
     <h2>Flights to <span id="country-name"></span></h2>
     <table id="flights-table">
