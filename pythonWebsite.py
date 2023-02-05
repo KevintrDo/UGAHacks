@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 from flask import Flask, request, render_template
 
 from googletrans import Translator
@@ -8,11 +9,15 @@ translator = Translator()
 =======
 from flask import Flask, request, render_template, Blueprint
 >>>>>>> a4a80a9 (Button to backend)
+=======
+from flask import Flask, request, render_template, Blueprint
+>>>>>>> a4a80a9836ef699339e9209ad4503a052b8bb5ad
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
+<<<<<<< HEAD
 <<<<<<< HEAD
   return render_template('Culture.html')
 
@@ -39,6 +44,8 @@ def defValue():
 if __name__ == "__main__":
   app.run(host='0.0.0.0', port=80, debug=True)
 =======
+=======
+>>>>>>> a4a80a9836ef699339e9209ad4503a052b8bb5ad
   return render_template('Website.html')
 
 @app.route("/country")
@@ -52,5 +59,9 @@ def translatePage():
     return render_template('ContactInfo')
 
 if __name__ == "__main__":
+<<<<<<< HEAD
   app.run(host='0.0.0.0', port=80,debug=True)
 >>>>>>> a4a80a9 (Button to backend)
+=======
+  app.run(host='0.0.0.0', port=80,debug=True)
+>>>>>>> a4a80a9836ef699339e9209ad4503a052b8bb5ad
