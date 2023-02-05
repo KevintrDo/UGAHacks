@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Traveler's Handbook</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+     h1 {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+  font-size: 300%;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h2 {
+  background-color: #31ca23;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-style: italic;
+  text-align: center;
+  font-weight: bold;
+  padding: 15px;
+}
+
+tr, th {
+  background-color: #7dff04;
+  text-align: center;
+  font-weight: bold;
+  padding: 15px;
+}
+
+    </style>
+  </head>
+  <body>
+    <h1>The Traveler's Handbook</h1>
+    <h2>Flights to <span id="country-name"></span></h2>
+    <table id="flights-table">
+      <tr>
+        <th>Flight Number</th>
+        <th>Departure City</th>
+        <th>Arrival City</th>
+        <th>Departure Time</th>
+        <th>Arrival Time</th>
+      </tr>
+    </table>
+
+    <script>
+      // Get the country name from an earlier part of the website
+      const countryName = "User's inputed Country"; // Example value, replace as needed
+      document.querySelector("#country-name").innerHTML = countryName;
+
+      // API call to get the flight data for the selected country
+      const API_URL = `https://api.example.com/flights?to=${countryName}`; // Replace with the actual API URL
+
+      fetch(API_URL)
+        .then(response => response.json())
+        .then(flights => {
+          // Create a table row for each flight
+          const flightsTable = document.querySelector("#flights-table");
+          flights.forEach(flight => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+              <td>${flight.flightNumber}</td>
+              <td>${flight.departureCity}</td>
+              <td>${flight.arrivalCity}</td>
+              <td>${flight.departureTime}</td>
+              <td>${flight.arrivalTime}</td>
+            `;
+            flightsTable.appendChild(row);
+          });
+        });
+    </script>
+  </body>
+</html>
