@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-image: url(static/aCountry.jpg);
+        background-size: cover;
+      }
+      
+      .search-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #333;
+      }
+      
+      .search-bar {
+        width: 100%;
+        padding: 16px;
+        font-size: 16px;
+        color: black;
+        border-radius: 10px;
+        border: 2px solid #333;
+        background-color: rgba(21, 238, 241, 0.357);
+      }
+      .bottom {
+        color: red;
+        width: 100%;
+        height: 50px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        background-color: white;
+      }
+     
+      li {
+        float: left;
+        padding: 5px;
+      }
+      ul {
+        list-style-type: none;
+      }
+
+      .tabcontent {
+        color: white;
+        display: none;
+        padding: 50px;
+        text-align: center;
+      }
+      .navbar {
+        overflow: hidden;
+        background-color: white;
+        position: absolute;
+        padding: 10px;
+        width: 100%;
+        top: 0;
+        left: 0;
+      }
+      .navbar a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+      }
+      .search-link {
+        color: white;
+        max-width: 10px;
+      }
+      .search-btn {
+        margin: 10px;
+      }
+      .submit-btn {
+        display: block;
+        position: absolute;
+        padding: 5px;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="search-container">
+      <form id="countryForm" name="country_form">
+        <input type="input" id="country" class="search-bar" placeholder="Search for a country..." style="color:black";>
+        <input class="submit-btn" type="submit" value="Search">
+      </form>
+    </div>
+    <div class="navbar">
+      <a href="Homepage draft 1 (simone).html" class="active">Home</a>
+      <a href="AboutUs.html" class="active">About Us</a>
+      <a href="ContactInfo.html" class="active">Contact</a>
+    </div>
+    
+    <script src="homepage.js"></script>
+  </body>
+
+</html>
